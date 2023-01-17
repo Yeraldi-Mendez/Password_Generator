@@ -43,6 +43,15 @@ function generatePassword(){
   }
 
   else {
-    confirmNumber = confirm ("Will your password contain numbers")
-  }
+    confirmNumber = confirm ("Will your password contain numbers?");
+    console.log("Number " + confirmNumber);
+    confirmNumber = confirm ("Will your password contain special characters?");
+    console.log("Special Character " + confirmSchar);
+    confirmNumber = confirm ("Will your password contain lower case letters?");
+    console.log("Lower case " + confirmLower);
+    confirmNumber = confirm ("Will your password contain upper case letters?");
+    console.log("Upper case " + confirmUpper);
+  };
+
+  
 }
