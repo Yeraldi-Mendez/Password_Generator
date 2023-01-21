@@ -67,63 +67,63 @@ function generatePassword(){
   } 
   //3 selections are made, different patterns 
   else if(confirmNumber && confirmSchar && confirmLower){
-    selectedCriteria = selectedCriteria.concat(number, sChar, lower);
+    selectedCriteria = number.concat(sChar, lower);
     console.log(selectedCriteria);
   }
   else if(confirmNumber && confirmSchar && confirmUpper){
-    selectedCriteria = selectedCriteria.concat(number, sChar, upper);
+    selectedCriteria = number.concat(sChar, upper);
    console.log(selectedCriteria);
   }
   else if(confirmNumber && confirmLower && confirmUpper){
-    selectedCriteria = selectedCriteria.concat(number, lower, upper);
+    selectedCriteria = number.concat(lower, upper);
    console.log(selectedCriteria);
   }
   else if(confirmSchar && confirmLower && confirmUpper){
-    selectedCriteria = selectedCriteria.concat(sChar, lower, upper);
+    selectedCriteria = sChar.concat(lower, upper);
     console.log(selectedCriteria);
   }
   //2 selections were made, different patterns
   else if(confirmNumber && confirmSchar){
-    selectedCriteria = selectedCriteria.concat(number, sChar);
+    selectedCriteria = number.concat(sChar);
     console.log(selectedCriteria);
   }
   else if(confirmNumber && confirmLower){
-    selectedCriteria = selectedCriteria.concat(number, lower);
+    selectedCriteria = number.concat(lower);
     console.log(selectedCriteria);
   }
   else if(confirmNumber && confirmUpper){
-    selectedCriteria = selectedCriteria.concat(number, upper);
+    selectedCriteria = number.concat(upper);
     console.log(selectedCriteria);
   }
   else if (confirmSchar && confirmLower){
-    selectedCriteria = selectedCriteria.concat(sChar, lower);
+    selectedCriteria = sChar.concat(lower);
     console.log(selectedCriteria);
   }
   else if(confirmSchar && confirmUpper){
-    selectedCriteria = selectedCriteria.concat(sChar, upper);
+    selectedCriteria = sChar.concat(upper);
     console.log(selectedCriteria);
   }
   else if(confirmLower && confirmUpper){
-    selectedCriteria = selectedCriteria.concat(lower, upper);
+    selectedCriteria = lower.concat(upper);
     console.log(selectedCriteria);
   }
   //only 1 criteria is selected
   else if(confirmNumber){
-    selectedCriteria = selectedCriteria.concat(number);
+    selectedCriteria = number;
     console.log(selectedCriteria);
   }
   else if(confirmSchar){
-    selectedCriteria = selectedCriteria.concat(sChar);
+    selectedCriteria = sChar;
     console.log(selectedCriteria);
   }
   else if(confirmLower){
-    selectedCriteria = selectedCriteria.concat(lower);
+    selectedCriteria = lower;
     console.log(selectedCriteria);
   }
   else if (confirmUpper){
-    selectedCriteria = selectedCriteria.concat(upper);
+    selectedCriteria = upper;
     console.log(selectedCriteria);
-  }
+  };
   
   var ranPassword = [];
 
