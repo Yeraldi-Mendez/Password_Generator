@@ -60,6 +60,11 @@ function generatePassword(){
   if(!confirmNumber && !confirmSchar && !confirmLower && !confirmUpper){
     selectedCriteria = alert("You must select at least one criteria");    
   } 
+  //user selected all criterias
+  else if(confirmNumber && confirmSchar && confirmLower && confirmUpper){
+    selectedCriteria = number.concat(sChar, lower, upper);
+    console.log(selectedCriteria);
+  } 
   //3 selections are made, different patterns 
   else if(confirmNumber && confirmSchar && confirmLower){
     selectedCriteria = selectedCriteria.concat(number, sChar, lower);
