@@ -33,7 +33,7 @@ var selectedCriteria;
 // this are if they answer all 
 function generatePassword(){
   passwordLength = prompt("How many characters would your password contain? (8-128)");
-  console.log("Password Lenght " + passwordLength);
+  console.log("Password Length " + passwordLength);
   //user did not respond to password length
   if(!passwordLength){
     alert("Required value");
@@ -58,16 +58,72 @@ function generatePassword(){
   //these is to continue user's input but some or all have no answer
   //user selects no criteria
   if(!confirmNumber && !confirmSchar && !confirmLower && !confirmUpper){
-    alert("You must select at least one criteria");    
+    selectedCriteria = alert("You must select at least one criteria");    
   } 
-  else {
-
-  console.log(selectedCriteria)
-
+  //3 selections are made, different patterns 
+  else if(confirmNumber && confirmSchar && confirmLower){
+    selectedCriteria = selectedCriteria.concat(number, sChar, lower);
+    console.log(selectedCriteria);
+  }
+  else if(confirmNumber && confirmSchar && confirmUpper){
+    selectedCriteria = selectedCriteria.concat(number, sChar, upper);
+   console.log(selectedCriteria);
+  }
+  else if(confirmNumber && confirmLower && confirmUpper){
+    selectedCriteria = selectedCriteria.concat(number, lower, upper);
+   console.log(selectedCriteria);
+  }
+  else if(confirmSchar && confirmLower && confirmUpper){
+    selectedCriteria = selectedCriteria.concat(sChar, lower, upper);
+    console.log(selectedCriteria);
+  }
+  //2 selections were made, different patterns
+  else if(confirmNumber && confirmSchar){
+    selectedCriteria = selectedCriteria.concat(number, sChar);
+    console.log(selectedCriteria);
+  }
+  else if(confirmNumber && confirmLower){
+    selectedCriteria = selectedCriteria.concat(number, lower);
+    console.log(selectedCriteria);
+  }
+  else if(confirmNumber && confirmUpper){
+    selectedCriteria = selectedCriteria.concat(number, upper);
+    console.log(selectedCriteria);
+  }
+  else if (confirmSchar && confirmLower){
+    selectedCriteria = selectedCriteria.concat(sChar, lower);
+    console.log(selectedCriteria);
+  }
+  else if(confirmSchar && confirmUpper){
+    selectedCriteria = selectedCriteria.concat(sChar, upper);
+    console.log(selectedCriteria);
+  }
+  else if(confirmLower && confirmUpper){
+    selectedCriteria = selectedCriteria.concat(lower, upper);
+    console.log(selectedCriteria);
+  }
+  //only 1 criteria is selected
+  else if(confirmNumber){
+    selectedCriteria = selectedCriteria.concat(number);
+    console.log(selectedCriteria);
+  }
+  else if(confirmSchar){
+    selectedCriteria = selectedCriteria.concat(sChar);
+    console.log(selectedCriteria);
+  }
+  else if(confirmLower){
+    selectedCriteria = selectedCriteria.concat(lower);
+    console.log(selectedCriteria);
+  }
+  else if (confirmUpper){
+    selectedCriteria = selectedCriteria.concat(upper);
+    console.log(selectedCriteria);
+  }
+  
   var ranPassword = [];
 
   for (var i = 0; i < passwordLength; i++){
-    ranPassword = ranPassword + selectedCriteria[Math.floor(math.random () * selectedCriteria.length)];
+    ranPassword = selectedCriteria[Math.floor(math.random () * selectedCriteria.length)];
     console.log(ranPassword)
   }
 
