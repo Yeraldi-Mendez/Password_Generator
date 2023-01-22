@@ -125,12 +125,15 @@ function generatePassword(){
     console.log(selectedCriteria);
   };
   
-  var ranPassword = [];
+  var BlankPw = [];
 
   for (var i = 0; i < passwordLength; i++){
-    ranPassword = selectedCriteria[Math.floor(math.random () * selectedCriteria.length)];
-    console.log(ranPassword)
+    var allSelected = selectedCriteria[Math.floor(math.random () * selectedCriteria.length)];
+    BlankPw.push(allSelected);
+    console.log(ranPassword);
   }
 
-  return ranPassword;
+  var password = BlankPw.join("");
+  console.log("Your password is " + password);
+  return password;
 }
