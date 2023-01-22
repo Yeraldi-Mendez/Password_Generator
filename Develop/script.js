@@ -128,9 +128,9 @@ function generatePassword(){
   var BlankPw = [];
 
   for (var i = 0; i < passwordLength; i++){
-    var allSelected = selectedCriteria[Math.floor(math.random () * selectedCriteria.length)];
+    var allSelected = selectedCriteria[Math.floor(Math.random() * selectedCriteria.length)];
     BlankPw.push(allSelected);
-    console.log(ranPassword);
+    console.log(allSelected);
   }
 
   var password = BlankPw.join("");
