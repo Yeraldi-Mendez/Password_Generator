@@ -42,6 +42,7 @@ The following image shows the web application's appearance and functionality:
 https://github.com/Yeraldi-Mendez/Password_Generator.git
 
 ## Deployed Website
+https://yeraldi-mendez.github.io/Password_Generator/
 
 
 - - -
